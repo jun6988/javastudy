@@ -42,6 +42,10 @@ public class Goods {
 
 
 	public void setPrice(int price) {
+		if(price < 0) {
+			price = 0;
+		}
+		
 		this.price = price;
 	}
 
@@ -76,12 +80,33 @@ public class Goods {
 
 
 
-	// source - generate to string 해야 GoodsApp에서 출력 가능 / 하지 않으면 해시 값이 출력된다
-	@Override
-	public String toString() {
-		return "Goods [name=" + name + ", price=" + price + ", countStock=" + countStock + ", countSold=" + countSold
-				+ "]";
+
+	public void showInfo() {
+		System.out.println("Goods [name=" + name + ", price=" + price + ", countStock=" + countStock + ", countSold=" + countSold+ "]");
+		
 	}
+
+
+
+
+
+	public int calcDiscountPrice(double discountRate) {
+		return (int)(price * discountRate);
+	}
+
+
+
+
+	// source - generate to string 해야 GoodsApp에서 출력 가능 / 하지 않으면 해시 값이 출력된다
+//	@Override
+//	public String toString() {
+//		return "Goods [name=" + name + ", price=" + price + ", countStock=" + countStock + ", countSold=" + countSold
+//				+ "]";
+//	}
+	
+	
+	
+	
 	
 	
 	
