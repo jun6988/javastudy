@@ -1,14 +1,25 @@
 package chapter03;
 
 public class Goods {
+	public static int countOfGoods = 0;
 	private String name;
 	private int price;
 	private int countStock;
 	private int countSold;
 	
+//	기본 생성자 생성하면 나오는 것
+//	public Goods(int price) {
+//		
+//	}
+
+	public Goods() {
+		countOfGoods++;
+	}
 	
-
-
+	
+	
+	
+	
 	public String getName() {
 		return name;
 	}
