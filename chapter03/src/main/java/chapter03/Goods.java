@@ -2,6 +2,7 @@ package chapter03;
 
 public class Goods {
 	public static int countOfGoods = 0;
+	
 	private String name;
 	private int price;
 	private int countStock;
@@ -13,10 +14,32 @@ public class Goods {
 //	}
 
 	public Goods() {
+		
+		// somecodes 중복
 		countOfGoods++;
 	}
 	
+	// 기본 생성자
+	// 생성자 
+	// 다형성
+	// 오버로딩 (하나의 클래스에서 나타난다)
+	// 생성자 오버로딩
+	// 시그너쳐들을 다양하게 해서 다양하게 객체를 생성 (String name ,,,)
+	public Goods(String name, int price, int countStock, int countSold) {
+		// refactoring
+		// somecodes 중복(countofgoods) > this(); 사용
+		this();
+		
+		this.name = name;
+		this.price = price;
+		this.countStock = countStock;
+		this.countSold = countSold;
+		
+		// 중복
 	
+		
+//		countOfGoods++;
+	}
 	
 	
 	

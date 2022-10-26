@@ -8,6 +8,35 @@ public class Song {
 	private int year;
 	private int track;
 	
+	
+	//기본생성자 오버로딩
+	public Song() {
+	}
+	
+	public Song(String title, String artist) {
+//		this.title = title;
+//		this.artist = artist;
+//		this.album = "";
+//		this.composer = "";
+		// null이 싫을 때this keyword에서 파라미터 맞춰서 작성
+		// 코드 재사용이 가능하다
+		this(title, artist, "", "", 0, 0);
+		
+	}
+	
+	public Song(String title, String artist, String album, String composer, int year, int track) {
+		this.title = title;
+		this.artist = artist;
+		this.album = album;
+		this.composer = composer;
+		this.year = year;
+		this.track = track;
+	}
+	
+	
+	
+	
+	
 	public String getTitle() {
 		return title;
 	}
