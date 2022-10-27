@@ -1,4 +1,6 @@
-package paint;
+package com.bitacademy.paint.shape;
+
+import com.bitacademy.paint.i.Drawable;
 
 public abstract class Shape implements Drawable{ // abstract : main에서 new로 인스턴스 만들 수 없다
 	private String lineColor;
