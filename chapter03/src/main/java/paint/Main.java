@@ -20,11 +20,11 @@ public class Main {
 //		pt2.setColor("red");
 		
 		// 객체를 만드는 코드 (수정x)
-		Point pt2 = new ColorPoint();
-		pt2.setX(100); // 코드 재사용
-		pt2.setY(200);
-		// 다운 케스팅 >> colorpoint가 아닌 point(부모) 참조 / 주차장 
-		((ColorPoint)pt2).setColor("red");
+		Point pt2 = new ColorPoint(100, 200, "red");
+//		pt2.setX(100); // 코드 재사용
+//		pt2.setY(200);
+//		// 다운 케스팅 >> colorpoint가 아닌 point(부모) 참조 / 주차장 
+//		((ColorPoint)pt2).setColor("red");
 		
 		// 다운 케스팅 수정없이 기본 것 쓸 수 있다
 //		drawColorPoint(pt2);
@@ -32,6 +32,19 @@ public class Main {
 		pt2.show(false);
 		// point에서 if문에서 오바라이드 되어있기 때문에 안해도된다
 //		pt2.show(true);
+		
+		Triangle triangle = new Triangle();
+		drawShape(triangle);
+		
+		Rectangle rectangle = new Rectangle();
+		drawShape(rectangle);
+		
+		Circle circle = new Circle();
+		drawShape(circle);
+	}
+	
+	public static void draw(IDrawable drawble) {
+		
 	}
 	
 	public static void drawPoint(Point pt) {
@@ -41,4 +54,8 @@ public class Main {
 //	public static void drawColorPoint(ColorPoint pt) {
 //		pt.show();
 //	}
+	
+	public static void drawShape(Shape shape) {
+		shape.draw();
+	}
 }

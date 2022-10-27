@@ -4,8 +4,8 @@ public class Point {
 	private int x;
 	private int y;
 	
+	// 기본 생성자 / 없으면 colorpoint(intx, inty, string color); 에러
 	public Point() {
-		
 	}
 	
 	public Point(int x, int y) {

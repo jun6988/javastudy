@@ -3,6 +3,16 @@ package paint;
 public class ColorPoint extends Point {
 	private String color;
 
+	public ColorPoint(int x, int y, String color) {
+		// this 사용 x , private 때문에 접근을 못한다
+		// 자식 생성자에서 반드시 부모 생성자 호출한다
+//		setX(x);
+//		setY(y);
+		// 이게 더 멋지다
+		super(x,y);
+		this.color = color;
+	}
+
 	public String getColor() {
 		return color;
 	}
