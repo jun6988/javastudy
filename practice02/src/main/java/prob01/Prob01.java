@@ -11,8 +11,14 @@ public class Prob01 {
 		/* 코드 작성 */
 		System.out.println("액수: ");
 		int price = scanner.nextInt();
-		System.out.println(price);
 		
+		for(int i = 0; i < MONEYS.length; i++) {
+			int count = price / MONEYS[i];
+			price -= (count * MONEYS[i]);
+
+			System.out.println(MONEYS[i] + "원 : " + count + "개");
+		}
+
 		scanner.close();
- 	}
+	}
 }
